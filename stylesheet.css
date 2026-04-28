@@ -136,6 +136,7 @@
       color: var(--muted);
       line-height: 1.6;
       margin: 0 0 16px;
+      position: relative;
     }
 
     .tech {
@@ -209,3 +210,16 @@
       .skills { justify-content: flex-start; }
       .grid { grid-template-columns: 1fr; }
     }
+
+    .banner {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #f59e0b;
+  color: #111;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  z-index: 10;
+}
