@@ -1,13 +1,9 @@
-    :root {
-  --bg: #0f172a;
-  --card: #111827;
+:root {
   --soft: #1f2937;
   --text: #f8fafc;
   --muted: #cbd5e1;
   --accent: #8b5cf6;
-  --accent2: #22c55e;
   --border: rgba(255,255,255,0.12);
-  --warning: #f59e0b;
 }
 
 /* RESET */
@@ -124,7 +120,7 @@ section {
   background: linear-gradient(180deg, rgba(139,92,246,0.15), rgba(17,24,39,0.95));
 }
 
-/* 🔥 NEW: STATUS RIBBON */
+/* STATUS RIBBON */
 
 .project-status {
   margin: -22px -22px 18px;
@@ -212,6 +208,12 @@ section {
 .btn.secondary {
   background: transparent;
   color: var(--muted);
+}
+
+.btn.disabled {
+  display: inline-block;
+  cursor: not-allowed;
+  opacity: 0.62;
 }
 
 /* ABOUT */
