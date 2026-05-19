@@ -13,21 +13,31 @@
       <span class="tag">Project Showcase Portfolio</span>
       <h1>Haley Abel</h1>
       <p class="subtitle">
-        Informatics student building full-stack web applications, interactive games,
-        API-based tools, and user-focused digital experiences.
+        Informatics student building practical full-stack applications,
+        interactive tools, API-driven projects, and user-focused digital experiences.
       </p>
 
-      <div class="skills">
-        <span>Django</span>
-        <span>React</span>
-        <span>JavaScript</span>
-        <span>Node.js</span>
-        <span>MongoDB</span>
-        <span>Unity</span>
-        <span>C#</span>
-        <span>Java</span>
-        <span>HTML/CSS</span>
+      <div class="hero-actions">
+        <a class="btn primary" href="Resume-2026.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+        <a class="btn secondary" href="https://github.com/haley09" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
       </div>
+
+      <div class="skills" aria-label="Filter projects by skill">
+        <button class="skill-filter active" type="button" data-filter="all">All</button>
+        <button class="skill-filter" type="button" data-filter="django">Django</button>
+        <button class="skill-filter" type="button" data-filter="python">Python</button>
+        <button class="skill-filter" type="button" data-filter="react">React</button>
+        <button class="skill-filter" type="button" data-filter="javascript">JavaScript</button>
+        <button class="skill-filter" type="button" data-filter="api">REST APIs</button>
+        <button class="skill-filter" type="button" data-filter="node">Node.js/Express</button>
+        <button class="skill-filter" type="button" data-filter="mongodb">MongoDB</button>
+        <button class="skill-filter" type="button" data-filter="sql">PostgreSQL/SQLite</button>
+        <button class="skill-filter" type="button" data-filter="unity">Unity</button>
+        <button class="skill-filter" type="button" data-filter="csharp">C#</button>
+        <button class="skill-filter" type="button" data-filter="java">Java</button>
+        <button class="skill-filter" type="button" data-filter="html-css">HTML/CSS</button>
+      </div>
+      <p id="filterStatus" class="filter-status">Showing all projects.</p>
     </div>
   </header>
 
@@ -36,12 +46,12 @@
       <div class="container">
         <div class="section-heading">
           <h2>Featured Projects</h2>
-          <p>Major projects showing full-stack development, authentication, APIs, game systems, and UI design.</p>
+          <p>Selected portfolio projects showing full-stack development, authentication, dashboards, APIs, and product-focused UI design.</p>
         </div>
 
         <div class="grid">
 
-          <article class="project-card featured">
+          <article class="project-card featured" data-tags="django python react javascript api sql html-css">
             
             <div class="project-top">
               <h3>NextStep</h3>
@@ -49,10 +59,10 @@
             </div>
             <p>
               A full-stack job matching platform with swipe-based discovery,
-              matching, chat functionality, JWT authentication, and a React frontend with a custom CSS stylesheet
+              matching, chat functionality, JWT authentication, and a React frontend backed by a Django REST API.
             </p>
             <div class="tech">
-              <span>Django</span><span>React</span><span>JWT</span><span>CSS</span>
+              <span>Django REST</span><span>React</span><span>JWT</span><span>PostgreSQL</span>
             </div>
             <div class="links">
               <a class="btn primary" href="https://haley-nextstep.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
@@ -60,7 +70,7 @@
             </div>
           </article>
 
-          <article class="project-card featured">
+          <article class="project-card featured" data-tags="react javascript api html-css">
             
             <div class="project-top">
               <h3>Farmer Companion</h3>
@@ -68,14 +78,14 @@
             </div>
             <p>
               A full-featured crop farm management dashboard with field profitability tracking,
-              equipment management, weather integration, commodity pricing, and data export tools.
+              equipment service logs, weather integration, commodity pricing, team access controls, and data export tools.
             </p>
 
             <div class="tech">
               <span>React</span>
+              <span>Vite</span>
               <span>Dashboard UI</span>
-              <span>Data Modeling</span>
-              <span>AgTech</span>
+              <span>localStorage</span>
             </div>
 
             <div class="links">
@@ -92,19 +102,19 @@
       <div class="container">
         <div class="section-heading">
           <h2>Supporting Projects</h2>
-          <p>Additional projects showing range across frontend development, Django, Node.js, Java, Unity, and UI design.</p>
+          <p>Additional work showing range across frontend development, Django, Node.js, Java, Unity, and business-focused interface design.</p>
         </div>
 
         <div class="grid">
 
-          <article class="project-card">
+          <article class="project-card" data-tags="javascript html-css">
             <div class="project-top">
               <h3>Pawsitive Playhouse</h3>
               <span class="badge">Frontend</span>
             </div>
             <p>
-              A responsive animal daycare and boarding business website with services,
-              pricing, schedule, staff, gallery, about, and contact sections.
+              A responsive small-business website for an animal daycare and boarding service,
+              featuring pricing, daily schedule, staff, gallery, and contact sections.
             </p>
             <div class="tech">
               <span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI/UX</span>
@@ -115,14 +125,14 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-tags="javascript html-css">
             <div class="project-top">
               <h3>TaskFlow</h3>
               <span class="badge">Frontend</span>
             </div>
             <p>
-              A personal task manager with login validation, persistent local storage,
-              categories, priorities, search, filters, and inline editing.
+              A personal productivity app with login validation, user-specific local storage,
+              categories, priorities, live search, filters, and inline task editing.
             </p>
             <div class="tech">
               <span>HTML</span><span>CSS</span><span>JavaScript</span><span>localStorage</span>
@@ -133,17 +143,17 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-tags="javascript api html-css">
             <div class="project-top">
               <h3>CineMatch</h3>
               <span class="badge">API App</span>
             </div>
             <p>
-              A movie decision app that uses an external movie API to help users discover
-              movies based on preferences, filters, mood, and available time.
+              A movie discovery app with TMDB-powered search, mood-based recommendations,
+              watched-list persistence, and frontend demo authentication.
             </p>
             <div class="tech">
-              <span>JavaScript</span><span>API</span><span>HTML</span><span>CSS</span>
+              <span>JavaScript</span><span>TMDB API</span><span>localStorage</span><span>Auth Demo</span>
             </div>
             <div class="links">
               <a class="btn primary" href="https://cinematch-movie-app.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
@@ -151,7 +161,7 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-tags="node javascript mongodb api html-css">
             <div class="project-status">Coming Soon</div>
 
             <div class="project-top">
@@ -160,10 +170,10 @@
             </div>
             <p>
               A role-based academic portal with student and teacher authentication,
-              course browsing, schedule management, and teacher course controls.
+              course browsing, schedule management, JWT cookies, and teacher course controls.
             </p>
             <div class="tech">
-              <span>Node.js</span><span>Express</span><span>MongoDB</span><span>EJS</span>
+              <span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span><span>EJS</span>
             </div>
             <div class="links">
               <span class="btn primary disabled">Live Demo</span>
@@ -171,14 +181,14 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" data-tags="django python sql html-css">
             <div class="project-top">
               <h3>Cobra Kai Banking</h3>
               <span class="badge">Django Project</span>
             </div>
             <p>
               A Django banking simulation with user authentication, bank account creation,
-              deposits, withdrawals, validation, dashboard views, and transaction history.
+              deposits, withdrawals, transaction validation, dashboard views, and account history.
             </p>
             <div class="tech">
               <span>Django</span><span>Python</span><span>SQLite</span><span>HTML/CSS</span><span>Render</span>
@@ -197,11 +207,11 @@
       <div class="container">
         <div class="section-heading">
           <h2>In Progress & Archive</h2>
-            <p>Projects being reviewed, packaged, or prepared for future live demos.</p>
+            <p>Game and archive projects being reviewed, packaged, or prepared for future playable demos.</p>
       </div>
 
     <div class="grid">
-          <article class="project-card">
+          <article class="project-card" data-tags="unity csharp">
             <div class="project-status">Coming Soon</div>
 
             <div class="project-top">
@@ -210,7 +220,7 @@
             </div>
             <p>
               A Unity survival game with player movement, obstacle spawning,
-              scoring, pause/game-over menus, settings, and scrolling backgrounds.
+              scoring, pause and game-over menus, settings, and scrolling background effects.
             </p>
             <div class="tech">
               <span>Unity</span><span>C#</span><span>Game Design</span>
@@ -221,7 +231,7 @@
             </div>
           </article>
 
-            <article class="project-card">
+            <article class="project-card" data-tags="java">
             <div class="project-status">Coming Soon</div>
 
             <div class="project-top">
@@ -230,7 +240,7 @@
             </div>
             <p>
               A Java Swing game with paddle movement, ball physics, collision detection,
-              scoring, lives, restart functionality, and a start menu.
+              scoring, lives, restart functionality, and a start menu built with desktop Java.
             </p>
             <div class="tech">
               <span>Java</span><span>Swing</span><span>AWT</span><span>Game Logic</span>
@@ -252,13 +262,13 @@
 
         <div class="about">
           <p>
-            This project showcase highlights my growth across multiple areas of software development:
-            full-stack web applications, API integration, authentication systems, frontend design,
-            database-backed applications, and game development.
+            This showcase highlights my growth across software development:
+            full-stack web applications, API integration, authentication systems,
+            data-backed dashboards, frontend design, and game development.
           </p>
           <p>
-            My goal is to continue building practical, user-focused applications while strengthening
-            my skills in software development, data-driven systems, and information technology.
+            My goal is to keep building practical, user-focused applications while strengthening
+            my skills in software engineering, data-driven systems, and information technology.
           </p>
         </div>
       </div>
@@ -270,5 +280,6 @@
       <p>&copy; 2026 Haley Abel &bull; Project Showcase</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

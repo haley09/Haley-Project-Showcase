@@ -57,6 +57,14 @@ h1 {
   line-height: 1.7;
 }
 
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
 .skills {
   display: flex;
   justify-content: center;
@@ -65,13 +73,28 @@ h1 {
   margin-top: 28px;
 }
 
-.skills span {
+.skill-filter {
   background: rgba(139,92,246,0.15);
   border: 1px solid rgba(139,92,246,0.35);
   padding: 8px 12px;
   border-radius: 999px;
   color: #ddd6fe;
+  cursor: pointer;
   font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.skill-filter:hover,
+.skill-filter.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.filter-status {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 14px;
 }
 
 /* SECTIONS */
@@ -113,6 +136,10 @@ section {
   flex-direction: column;
   box-shadow: 0 18px 40px rgba(0,0,0,0.25);
   overflow: hidden;
+}
+
+.project-card.hidden {
+  display: none;
 }
 
 .project-card.featured {
@@ -255,6 +282,10 @@ footer {
   }
 
   .skills {
+    justify-content: flex-start;
+  }
+
+  .hero-actions {
     justify-content: flex-start;
   }
 }
