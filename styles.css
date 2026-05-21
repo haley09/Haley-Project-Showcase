@@ -190,6 +190,13 @@ section {
   margin-bottom: 16px;
 }
 
+.project-card .project-note {
+  color: #ddd6fe;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin-top: -6px;
+}
+
 /* TECH TAGS */
 
 .tech {
